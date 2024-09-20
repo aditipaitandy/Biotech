@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Opportunity</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        h2 {
+            font-size: 2rem;
+            color: #3498DB;
+            text-align: center;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            background: linear-gradient(to right, #3498DB, #2C3E50); 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+            padding: 10px 0; 
+        }
+
+        form label {
+            font-weight: bold;
+            display: block;
+            margin-top: 15px;
+            font-size: 1rem;
+            color: #333;
+            letter-spacing: 0.5px;
+        }
+
+        input[type="text"], input[type="email"], input[type="tel"], input[type="number"], select {
+            width: 100%;
+            padding: 12px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-sizing: border-box;
+            transition: border-color 0.3s, box-shadow 0.3s, background-color 0.3s;
+            background-color: #f9f9f9;
+            font-size: 1rem;
+        }
+
+        input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, select:focus {
+            border-color: #3498DB;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+            background-color: #ffffff;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        input[type="submit"], input[type="reset"] {
+            padding: 12px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            color: white;
+            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); 
+            font-weight: bold;
+        }
+
+        input[type="submit"] {
+            background: linear-gradient(to right, #4CAF50, #2E8B57); 
+        }
+
+        input[type="submit"]:hover {
+            background: linear-gradient(to right, #45a049, #2E7D32); 
+            transform: scale(1.02);
+        }
+
+        input[type="reset"] {
+            background: linear-gradient(to right, #f44336, #C62828); 
+        }
+
+        input[type="reset"]:hover {
+            background: linear-gradient(to right, #e53935, #C62828); 
+            transform: scale(1.02);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                flex-direction: column;
+            }
+
+            .buttons {
+                flex-direction: column;
+            }
+
+            .buttons input {
+                margin-bottom: 10px;
+            }
+        }
+
+        .form-container {
+            background: linear-gradient(to right, #ffffff, #f9f9f9); 
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            padding: 30px; 
+            margin: 30px 0;
+            border: 1px solid #ddd;
+        }
+
+
+        .form-container h2 {
+            border-bottom: 2px solid #3498DB;
+            padding-bottom: 10px; 
+            margin-bottom: 20px; 
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1><img src="logo.png" alt="logo" width="200" align="Center">J.M. Biotech (Pvt) Ltd</h1>
+    </header>
+
+    <nav>
+        <div class="nav-container">
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <div class="dropdown">
+                    <a href="company_profile.html">About Us</a>
+                    <div class="dropdown-content">
+                        <a href="company_profile.html">Company Profile</a>
+                        <a href="quality_control.html">Quality Control and Services</a>
+                        <a href="certificate.html">Certifications and Awards</a>
+                    </div>
+                </div>
+                <a href="infrastructure.html">Infrastructure</a>
+                <a href="packing.html">Packing</a>
+                <a href="career.html">Careers</a>
+                <a href="opportunity.html">Opportunity</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="form-container">
+            <h2>Business Opportunity</h2>
+            <form action="#" method="POST">
+                <label for="type-of-business">Type of Business *</label>
+                <select id="type-of-business" name="type-of-business" required>
+                    <option value="">Select one option</option>
+                    <option value="Manufacturing">An Indenting Agent</option>
+                    <option value="Service">As Trader</option>
+                    <option value="Retail">In Joint Venture</option>
+                </select>
+
+                <label for="company-name">Name of the Company *</label>
+                <input type="text" id="company-name" name="company-name" required>
+
+                <label for="status-of-company">Status of the Company *</label>
+                <select id="status-of-company" name="status-of-company" required>
+                    <option value="">Select one option</option>
+                    <option value="Active">Ltd Company</option>
+                    <option value="Inactive">Pvt Ltd Company</option>
+                    <option value="Startup">Partnership Company</option>
+                    <option value="Established">Propreitorship Company</option>
+                </select>
+
+                <label for="address">Address</label>
+                <input type="text" id="address" name="address">
+
+                <label for="zip">Zip</label>
+                <input type="text" id="zip" name="zip">
+
+                <label for="telephone">Telephone No *</label>
+                <input type="tel" id="telephone" name="telephone" required>
+
+                <label for="email">E-Mail Id *</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="contact-person">Name of the Contact Person</label>
+                <input type="text" id="contact-person" name="contact-person">
+
+                <label for="mobile">Mobile No. *</label>
+                <input type="tel" id="mobile" name="mobile" required>
+
+                <label for="contact-email">Contact Person E-Mail Id *</label>
+                <input type="email" id="contact-email" name="contact-email" required>
+
+                <label for="turnover">Last Year Turnover</label>
+                <input type="text" id="turnover" name="turnover" placeholder="(Pl. mention the Currency)">
+
+                <div class="buttons">
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Reset">
+                </div>
+            </form>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 J.M. Biotech. All Rights Reserved.</p>
+            <p>Designed & Developed By: <a href="https://www.earnnlearn.co.in/lander" target="_blank">Earn N Learn Technologies</a></p>
+        </div>
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </footer>
+</body>
+</html>

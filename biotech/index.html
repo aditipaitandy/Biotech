@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>J.M. Biotech (Pvt) Ltd</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <h1><img src="logo.png" alt="logo" width="200" align="Center">J.M. Biotech (Pvt) Ltd</h1>
+    </header>
+
+    <nav>
+        <div class="nav-container">
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <div class="dropdown">
+                    <a href="#about-us">About Us</a>
+                    <div class="dropdown-content">
+                        <a href="company_profile.html">Company Profile</a>
+                        <a href="quality_control.html">Quality Control and Services</a>
+                        <a href="certificate.html">Certifications and Awards</a>
+                    </div>
+                </div>
+                <a href="infrastructure.html">Infrastructure</a>
+                <a href="packing.html">Packing</a>
+                <a href="career.html">Careers</a>
+                <a href="opportunity.html">Opportunity</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section id="home">
+            <div class="home-content">
+                <h2>Welcome to J.M. Biotech (Pvt) Ltd</h2>
+                <div class="home-text">
+                    <img src="abc.jpg" alt="Photo" class="home-img">
+                    <p>Founded in 1996, J.M. Biotech (Pvt) Ltd has become a leader in the biotech industry, adhering to the highest standards set by the Indian Companies Act 1956.</p>
+                </div>
+                <a href="company_profile.html" class="btn-primary">Click To View</a>
+                <a href="https://www.ricehuskash.co.in/ecatalogue/" class="btn-primary">View Catalouge</a>
+            </div>
+        </section>
+
+
+        <div class="slideshow">
+            <div class="slides">
+                <img src="nature.jpg" alt="Slide 1">
+                <img src="pic2.png" alt="Slide 2">
+                <img src="pic3.png" alt="Slide 3">
+            </div>
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+        </div>
+        
+        <section id="products">
+            <h2>Our Products</h2>
+            <div class="product-container">
+                <div class="product-card">
+                    <img src="https://th.bing.com/th/id/OIP.35cYzYWFFBLtynf2rAGqaAHaE9?rs=1&pid=ImgDetMain" alt="Product 1">
+                    <h3>Micro Silica</h3>
+                    <p>Micro Silica is a high-performance additive that enhances concrete strength and durability, ideal for construction projects.</p>
+                    <a href="contact.html" class="btn-enquire">Enquire about Pricing</a>
+                </div>
+                <div class="product-card">
+                    <img src="https://5.imimg.com/data5/SELLER/Default/2022/3/RJ/OL/CO/35909455/east-india-brown-biomass-pellet-1000x1000.jpg" alt="Product 3">
+                    <h3>Biomass Pellets</h3>
+                    <p>Biomass Pellets are eco-friendly fuel made from compressed organic materials, offering a sustainable energy solution for heating and power generation.</p>
+                    <a href="contact.html" class="btn-enquire">Enquire about Pricing</a>
+                </div>
+                <div class="product-card">
+                    <img src="https://img3.exportersindia.com/product_images/bc-full/dir_68/2019989/rice-husk-ash-680721.jpg" alt="Product 2">
+                    <h3>Rice Husk Ash</h3>
+                    <p>Rice Husk Ash is a sustainable, high-silica material used to improve concrete strength and as an eco-friendly alternative in construction.</p>
+                    <a href="contact.html" class="btn-enquire">Enquire about Pricing</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="news-section">
+            <div class="news-content">
+                <h2>Latest News</h2>
+                <p>Our technical expertise and stringent quality control, as documented under ISO 9001:2015, have established us as a globally recognized leader in biotech solutions demanded by steel mills worldwide.</p>
+            </div>
+        </section>
+
+    <section id="additional-buttons" style="text-align: center; margin-top: 20px;">
+        <a href="#laboratory_business" class="btn-primary" style="display: inline-block;">Laboratory Business</a>
+    </section>
+    
+</div>
+
+    <footer>
+        <p>&copy; 2024 J.M. Biotech. All Rights Reserved.</p>
+        <p>Designed & Developed By: <a href="https://www.earnnlearn.co.in/lander" target="_blank">Earn N Learn Technologies</a></p>
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </footer>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slides img');
+        const totalSlides = slides.length;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.style.transform = `translateX(${-index * 100}%)`;
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            showSlide(currentSlide);
+        }
+
+        function previousSlide() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            showSlide(currentSlide);
+        }
+
+        document.querySelector('.next').addEventListener('click', nextSlide);
+        document.querySelector('.prev').addEventListener('click', previousSlide);
+
+        setInterval(nextSlide, 3000);
+    </script>
+</body>
+
+</html>

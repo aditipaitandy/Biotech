@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Customer Feedback - J.M. Biotech (Pvt) Ltd</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .head h2 {
+            font-size: 1.8rem;
+            color: white;
+            text-align: center;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .head h1 {
+            font-size: 2.8rem;
+            color: #3498DB;
+            text-align: center;
+            margin-bottom: 30px;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .feedback-form-container {
+            max-width: 650px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, #ffffff, #f0f0f0);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            transition: box-shadow 0.3s, transform 0.3s ease;
+        }
+
+        .feedback-form-container:hover {
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            transform: translateY(-5px);
+        }
+
+        .feedback-form {
+            padding: 25px;
+            background-color: #f9f9f9;
+            border-radius: 15px;
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .feedback-form:hover {
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+        }
+
+        .feedback-form h3 {
+            margin-bottom: 20px;
+            color: #2C3E50;
+            text-align: center;
+            font-size: 1.7rem;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        }
+
+        .feedback-form label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .feedback-form input,
+        .feedback-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 18px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-sizing: border-box;
+            transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s ease;
+        }
+
+        .feedback-form input:focus,
+        .feedback-form textarea:focus {
+            border-color: #3498DB;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transform: scale(1.02);
+        }
+
+        .feedback-form textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        .feedback-form input[type="submit"] {
+            background-color: #3498DB;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 1.1rem;
+            font-weight: bold;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s ease;
+        }
+
+        .feedback-form input[type="submit"]:hover {
+            background-color: #2980B9;
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .feedback-form .required {
+            color: red;
+            font-weight: bold;
+        }
+
+        .feedback-response {
+            text-align: center;
+            font-size: 1.3rem;
+            margin-top: 20px;
+            color: #2C3E50;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1><img src="logo.png" alt="logo" width="200" align="Center">J.M. Biotech (Pvt) Ltd</h1>
+    </header>
+
+    <nav>
+        <div class="nav-container">
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <div class="dropdown">
+                    <a href="company_profile.html">About Us</a>
+                    <div class="dropdown-content">
+                        <a href="company_profile.html">Company Profile</a>
+                        <a href="quality_control.html">Quality Control and Services</a>
+                        <a href="certificate.html">Certifications and Awards</a>
+                    </div>
+                </div>
+                <a href="infrastructure.html">Infrastructure</a>
+                <a href="packing.html">Packing</a>
+                <a href="career.html">Careers</a>
+                <a href="opportunity.html">Opportunity</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="head">
+            <h2>Customer Feedback</h2>
+            <h1>We Value Your Feedback</h1>
+        </div>
+
+        <div class="feedback-form-container">
+            <div class="feedback-form">
+                <h3>Feedback Form</h3>
+                <form id="feedbackForm">
+                    <label for="name">Name <span class="required">*</span></label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="address">Address</label>
+                    <input type="text" id="address" name="address">
+
+                    <label for="email">Email <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="city">City</label>
+                    <input type="text" id="city" name="city">
+
+                    <label for="pin">Pin</label>
+                    <input type="text" id="pin" name="pin">
+
+                    <label for="state">State</label>
+                    <input type="text" id="state" name="state">
+
+                    <label for="country">Country</label>
+                    <input type="text" id="country" name="country">
+
+                    <label for="comments">Comments <span class="required">*</span></label>
+                    <textarea id="comments" name="comments" rows="4" required></textarea>
+
+                    <input type="submit" value="Submit Feedback">
+                </form>
+                <div id="responseMessage" class="feedback-response"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 J.M. Biotech. All Rights Reserved.</p>
+        <p>Designed & Developed By: <a href="https://www.earnnlearn.co.in/lander" target="_blank">Earn N Learn Technologies</a></p>
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>
